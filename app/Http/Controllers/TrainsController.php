@@ -14,9 +14,7 @@ class TrainsController extends Controller
         foreach($trains as $train){
             echo $train->Azienda . '</br>';
         }
-
         die();
-
         return view('trains');
     }
 }
