@@ -3,18 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\TrainsModel;
-
+use App\Train;
 class TrainsController extends Controller
 {
     public function list(){
-        
-        $trains = TrainsModel::all();
-
-        foreach($trains as $train){
-            echo $train->Azienda . '</br>';
-        }
-        die();
-        return view('trains');
+        $trains = Train::all();
+        return view('trains',['trains' => $trains]);
     }
 }
